@@ -1,8 +1,9 @@
-import Chai from './Chai.js';
+import Chai from './Chai';
 
 function App() {
   return (
-    <>
+    // to add More components use <div> or fragments
+    <> 
     <Chai/>
    <h1>Hello React | Editing react project deleting unnessesary files </h1>
   </>
