@@ -1,4 +1,4 @@
-// Add Chai function or component 
+// Add Chai function or component.
 function Chai(){
     return(
         <h3>Chai is ready</h3>
