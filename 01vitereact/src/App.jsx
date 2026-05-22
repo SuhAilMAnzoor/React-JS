@@ -1,7 +1,7 @@
 function App() {
-
+const  developerUser = "Sohail"
   return (
-    <h1>Hello SuhAil</h1>
+    <h1>Hello, {developerUser}</h1>
   )
 }
 
