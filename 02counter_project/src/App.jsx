@@ -1,35 +1,39 @@
-import { useState } from 'react'
+import { useState } from 'react'  // import hooks
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 
 function App() {
-  let countervalue = 0
 
-   function addValue () {
-    countervalue = countervalue + 1
-    console.log(countervalue)
+  let [counterValue, setCounter] =  useState(0)
+ 
+ // let counterValue = 0   // not in use now
+
+   function addValue ()  {
+  // counterValue = counterValue + 1
+  if(counterValue < 20){
+   setCounter(counterValue + 1)
+  }
    }
 
    const removeValue = () => {
-        if (countervalue > 0) {
-      countervalue = countervalue - 1
+        if (counterValue > 0) {  // condtion to avoid negative values
+      setCounter(counterValue - 1)
     }
-    console.log(countervalue);
    }
   return (
     <>
     <h1>Chai aur Chai ke sath men</h1>
-    <h2>Counter value : {countervalue}</h2>
+    <h2>Counter value : {counterValue}</h2>
     <button onClick={addValue}>
-      Add Value
+      Add Value {counterValue}
     </button>
     <br/>
     <br />
     <button 
     onClick={removeValue}>
-      Minus Value
+      Minus Value {counterValue}
     </button>
     
     </>
