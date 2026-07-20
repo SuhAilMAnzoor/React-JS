@@ -58,4 +58,4 @@ const authService = new AuthService();
 
 export default authService
 
-// modified and futured code for another backend serivce if you want to change
+/// modified and futured code for another backend serivce if you want to change
