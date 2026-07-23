@@ -2,7 +2,7 @@ import config from '../config/config.js';
 
 import { Client, Account, ID } from "appwrite";
 
-export class AuthService {
+export class AuthServices {
     client = new Client();
     account;
 
@@ -54,7 +54,7 @@ export class AuthService {
     }
 }
 
-const authService = new AuthService();
+const authService = new AuthServices();
 
 export default authService
 
