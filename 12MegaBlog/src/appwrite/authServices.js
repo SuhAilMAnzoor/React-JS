@@ -55,8 +55,8 @@ export class AuthServices {
     
 }
 
-const authService = new AuthServices();
+const authServices = new AuthServices();
 
-export default authService
+export default authServices
 
 /// modified and futured code for another backend serivce if you want to change
