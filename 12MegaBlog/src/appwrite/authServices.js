@@ -30,7 +30,7 @@ export class AuthServices {
 
     async login({email, password}){
         try{
-           return await this.account.createEmaillSession(email, password);
+           return await this.account.createEmailSession(email, password);
         } catch (error) {
             throw error;
         }
@@ -52,6 +52,7 @@ export class AuthServices {
             console.log("Appwrite service :: Logout :: error", error);
         }
     }
+    
 }
 
 const authService = new AuthServices();
