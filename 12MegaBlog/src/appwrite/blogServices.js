@@ -55,7 +55,7 @@ export class Service {
 
     async deletePost(slug) {
         try {
-            await databases.deleteDocument(
+            await this.databases.deleteDocument(
                 config.appwriteDatabaseId,
                 config.appwriteCollectionId,
                 slug
@@ -82,8 +82,8 @@ export class Service {
 
     async getPosts(queries = [Query.equal("status", "active")]) {
         try {
-            return await this.datebases.listDocuments(
-                cofig.appwriteDatabaseId,
+            return await this.databases.listDocuments(
+                config.appwriteDatabaseId,
                 config.appwriteCollectionId,
                 queries
             )
@@ -122,12 +122,12 @@ export class Service {
         }
     }
 
-    getFilePreview(fileId) {
-        return this.bucket.getFilePreview(
-            config.appwriteBucketId,
-            fileId
-        )
-    }
+getFilePreview(fileId) {
+    return this.bucket.getFileView(  // getFilePreview is not free on free tier plan, so using getFileView instead
+        config.appwriteBucketId,
+        fileId
+    )
+}
 }
 
 const service = new Service();
